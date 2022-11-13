@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="ASOI_ACTIVITY/asoi-activity-client/node_modules" />
+    <excludedPredefinedLibrary name="ASOI_ACTIVITY/asoi-activity-server/node_modules" />
+  </component>
+</project>
