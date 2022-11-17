@@ -14,7 +14,6 @@ const HomePage = () => {
                 <div className="ml-[26px]">
                   <p className="font-body text-xl text-gray-500 font-medium">ФИО:</p>
                   <p className="font-body text-xl text-gray-500 font-medium">Мобильный телефон:</p>
-                  <p className="font-body text-xl text-gray-500 font-medium">Мобильный телефон:</p>
                   <p className="font-body text-xl text-gray-500 font-medium">Факультет:</p>
                   <p className="font-body text-xl text-gray-500 font-medium">Группа:</p>
                 </div>
