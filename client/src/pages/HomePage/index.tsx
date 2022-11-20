@@ -12,18 +12,18 @@ const HomePage = () => {
               <div className="flex items-center ml-[161px] w-[997px] h-[161px]">
                 <img className="w-[161px] h-[161px]" src={userProfile}  alt="USER_PROFILE"/>
                 <div className="ml-[26px]">
-                  <p className="font-body text-xl text-gray-500 font-medium">ФИО:</p>
-                  <p className="font-body text-xl text-gray-500 font-medium">Мобильный телефон:</p>
-                  <p className="font-body text-xl text-gray-500 font-medium">Факультет:</p>
-                  <p className="font-body text-xl text-gray-500 font-medium">Группа:</p>
+                  <p className="text-xl text-gray-500">ФИО:</p>
+                  <p className="text-xl my-[14px] text-gray-500">Мобильный телефон:</p>
+                  <p className="text-xl text-gray-500">Факультет:</p>
+                  <p className="text-xl mt-[15px] text-gray-500">Группа:</p>
                 </div>
               </div>
             </div>
-            <div className="px-12 flex  items-center flex-col w-full h-[654px] mt-[37px] bg-gray-50 rounded-lg">
-              <p className="text-5xl mt-[7.5rem] mb-[106px] font-body font-medium">
+            <div className="px-12 flex items-center flex-col w-full h-[654px] mt-[37px] bg-gray-50 rounded-lg">
+              <p className="text-5xl mt-[7.5rem] mb-[106px]">
                 Добро пожаловать в ASOI ACTIVITY
               </p>
-              <p className="text-4xl text-center font-body font-medium">
+              <p className="text-4xl text-center">
                 Наше приложение поможет вам быстро зарегистрироваться на любое событие проходящее в ГГУ  им. Ф. Скорины
               </p>
             </div>

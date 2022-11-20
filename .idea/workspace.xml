@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -35,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -49,6 +50,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/client/src/assets/img" />
     </key>
   </component>
@@ -70,7 +72,10 @@
       <workItem from="1668355252434" duration="19000" />
       <workItem from="1668489068560" duration="326000" />
       <workItem from="1668489415460" duration="1473000" />
-      <workItem from="1668490899257" duration="32053000" />
+      <workItem from="1668490899257" duration="32769000" />
+      <workItem from="1668751258008" duration="131000" />
+      <workItem from="1668758418023" duration="220000" />
+      <workItem from="1668931116035" duration="16723000" />
     </task>
     <servers />
   </component>
