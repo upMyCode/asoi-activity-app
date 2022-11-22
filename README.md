@@ -1,4 +1,4 @@
 # asoi-activity-app
 ### Main page:
-![Main page](https://drive.google.com/file/d/1zXwAX0YP08VB8LuBK3Rs2SETFftLClt2/view?usp=share_link)
+![Main page](https://drive.google.com/uc?export=view&id=1DS1MQFagc816MKCw60f_Xkiwd4xhdKzc)
 # asoi-activity-app
