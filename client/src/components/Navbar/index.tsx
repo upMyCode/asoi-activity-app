@@ -55,7 +55,10 @@ const Navbar = () => {
         {isVisible && !isAuth
             ?
               <div className="absolute flex justify-center flex-col w-[154px] bg-gray-50 rounded shadow-md bottom-[85%] left-[4%]">
-                <button className="border-solid w-full text-center py-[6px] text-xs border-b border-gray-200 hover:bg-gray-200 rounded-t">
+                <button
+                    onClick={() => navigate("/login")}
+                    className="border-solid w-full text-center py-[6px] text-xs border-b border-gray-200 hover:bg-gray-200 rounded-t"
+                >
                   Войти в аккаунт
                 </button>
                 <button
