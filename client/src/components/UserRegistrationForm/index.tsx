@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormik } from 'formik';
 import {RegistrationSchema} from "./validation";
+import {ExclamationCircle} from "heroicons-react";
 
 type TInitialStateValues = {
   userFIO: string;
@@ -36,14 +37,20 @@ const UserRegistrationForm = () => {
           Регистрация пользователя
         </h1>
         <form className="w-[536px] mt-[68px] flex flex-col" onSubmit={formik.handleSubmit}>
-          <div>
+          <div className="relative">
             <label
                 className="block text-sm leading-5 font-medium text-gray-700"
                 htmlFor="userFIO"
             >ФИО
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userFIO && formik.touched.userFIO
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userFIO"
                 name="userFIO"
                 type="text"
@@ -51,11 +58,18 @@ const UserRegistrationForm = () => {
                 value={formik.values.userFIO}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userFIO && formik.touched.userFIO && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userFIO && formik.touched.userFIO && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userFIO}
             </div>}
           </div>
-          <div className="my-[18px]">
+          <div className="my-[18px] relative">
             <label
                 htmlFor="userEmail"
                 className="block leading-5 text-sm font-medium text-gray-700"
@@ -63,7 +77,13 @@ const UserRegistrationForm = () => {
               Email
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 py-2 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userEmail && formik.touched.userEmail
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userEmail"
                 name="userEmail"
                 type="email"
@@ -71,11 +91,18 @@ const UserRegistrationForm = () => {
                 value={formik.values.userEmail}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userEmail && formik.touched.userEmail && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userEmail && formik.touched.userEmail && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userEmail}
             </div>}
           </div>
-          <div>
+          <div className="relative">
             <label
                 htmlFor="userMobilePhone"
                 className="block leading-5 text-sm font-medium text-gray-700"
@@ -83,7 +110,13 @@ const UserRegistrationForm = () => {
               Мобильный телефон
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 py-2 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userMobilePhone && formik.touched.userMobilePhone
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userMobilePhone"
                 name="userMobilePhone"
                 type="text"
@@ -91,11 +124,18 @@ const UserRegistrationForm = () => {
                 value={formik.values.userMobilePhone}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userMobilePhone && formik.touched.userMobilePhone && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userMobilePhone && formik.touched.userMobilePhone && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userMobilePhone}
             </div>}
           </div>
-          <div className="my-[18px]">
+          <div className="my-[18px] relative">
             <label
                 htmlFor="userFaculty"
                 className="block leading-5 text-sm font-medium text-gray-700"
@@ -103,7 +143,13 @@ const UserRegistrationForm = () => {
               Факультет
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 py-2 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userFaculty && formik.touched.userFaculty
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userFaculty"
                 name="userFaculty"
                 type="text"
@@ -111,11 +157,18 @@ const UserRegistrationForm = () => {
                 value={formik.values.userFaculty}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userFaculty && formik.touched.userFaculty && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userFaculty && formik.touched.userFaculty && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userFaculty}
             </div>}
           </div>
-          <div>
+          <div className="relative">
             <label
                 htmlFor="userGroup"
                 className="block leading-5 text-sm font-medium text-gray-700"
@@ -123,7 +176,13 @@ const UserRegistrationForm = () => {
               Группа
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 py-2 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userGroup && formik.touched.userGroup
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userGroup"
                 name="userGroup"
                 type="text"
@@ -131,11 +190,18 @@ const UserRegistrationForm = () => {
                 value={formik.values.userGroup}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userGroup && formik.touched.userGroup && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userGroup && formik.touched.userGroup && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userGroup}
             </div>}
           </div>
-          <div className="my-[18px]">
+          <div className="my-[18px] relative">
             <label
                 htmlFor="userPassword"
                 className="block leading-5 text-sm font-medium text-gray-700"
@@ -143,7 +209,13 @@ const UserRegistrationForm = () => {
               Пароль
             </label>
             <input
-                className="block w-full rounded-md border-gray-300 py-2 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userPassword && formik.touched.userPassword
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userPassword"
                 name="userPassword"
                 type="password"
@@ -151,14 +223,27 @@ const UserRegistrationForm = () => {
                 value={formik.values.userPassword}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userPassword && formik.touched.userPassword && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userPassword && formik.touched.userPassword && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userPassword}
             </div>}
           </div>
-          <div>
+          <div className="relative">
             <label htmlFor="userRepeatPassword" className="block leading-5 text-sm font-medium text-gray-700">Повтор пароля</label>
             <input
-                className="block w-full rounded-md border-gray-300 pl-7 py-2 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className={
+                  formik.errors.userRepeatPassword && formik.touched.userRepeatPassword
+                      ?
+                      "block w-full rounded-md border pl-7 pr-12 py-2 border-solid ring-red-600 border-red-600 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      :
+                      "block w-full rounded-md border-gray-300 pl-7 pr-12 py-2 focus:border-indigo-500 ring-indigo-500 focus:border-indigo-500 rsm:text-sm"
+                }
                 id="userRepeatPassword"
                 name="userRepeatPassword"
                 type="password"
@@ -166,6 +251,13 @@ const UserRegistrationForm = () => {
                 value={formik.values.userRepeatPassword}
                 onBlur={formik.handleBlur}
             />
+            {formik.errors.userRepeatPassword && formik.touched.userRepeatPassword && (
+                <span className="flex justify-start items-start text-red-600  text-xs font-body">
+                  <span className="absolute pt-0.5 pr-1 top-[38%] left-[90%]">
+                    <ExclamationCircle className="text-red-600 w-4 h-4" />
+                  </span>
+                </span>
+            )}
             {formik.errors.userRepeatPassword && formik.touched.userRepeatPassword && <div className="text-sm leading-5 font-medium text-red-600">
               *{formik.errors.userRepeatPassword}
             </div>}

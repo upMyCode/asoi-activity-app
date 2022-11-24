@@ -54,16 +54,16 @@ const Navbar = () => {
         </ul>
         {isVisible && !isAuth
             ?
-              <div className="absolute flex justify-center flex-col w-[154px] bg-gray-50 rounded shadow-md bottom-[85%] left-[4%]">
+              <div className="absolute flex justify-center flex-col w-[154px] bg-gray-50 rounded-lg shadow-md bottom-[85%] left-[4%]">
                 <button
                     onClick={() => navigate("/login")}
-                    className="border-solid w-full text-center py-[6px] text-xs border-b border-gray-200 hover:bg-gray-200 rounded-t"
+                    className="border-solid w-full text-center py-[6px] text-xs border-b border-gray-200 hover:bg-gray-200 rounded-t-lg"
                 >
                   Войти в аккаунт
                 </button>
                 <button
                     onClick={() => navigate("/registration")}
-                    className="w-full text-center py-[6px] text-xs hover:bg-gray-200 rounded-b"
+                    className="w-full text-center py-[6px] text-xs hover:bg-gray-200 rounded-b-lg"
                 >
                   Зарегистрироваться
                 </button>
