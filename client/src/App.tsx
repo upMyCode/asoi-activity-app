@@ -4,6 +4,7 @@ import { PATHS } from './path/paths';
 import HomePage from './pages/HomePage';
 import RegistrationPage from "./pages/RegistrationPage";
 import LogInPage from './pages/LogInPage';
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route
               path={PATHS.LOGINPAGE}
               element={<LogInPage />}
+          />
+          <Route
+              path={PATHS.USERPROFILE}
+              element={<UserProfilePage />}
           />
           <Route
               path={PATHS.REGISTRATIONPAGE}

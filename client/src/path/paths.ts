@@ -1,5 +1,6 @@
 export enum PATHS {
   HOMEPAGE = "/",
   REGISTRATIONPAGE = "/registration",
-  LOGINPAGE = '/login'
+  LOGINPAGE = '/login',
+  USERPROFILE = '/userprofile'
 }

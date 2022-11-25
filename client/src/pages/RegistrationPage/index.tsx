@@ -20,7 +20,7 @@ const RegistrationPage = () => {
                     На главную
                   </button>
               </div>
-              <div className="w-full mt-[14px] mb-[6.75rem] flex justify-center items-center">
+              <div className="w-full mt-[14px] mb-[60px] flex justify-center items-center">
                 <AuthContainer>
                  <UserRegistrationForm />
                 </AuthContainer>
