@@ -19,7 +19,13 @@ const Navbar = () => {
 
   return (
       <div className="flex flex-col items-center w-[100px] min-h-screen bg-gray-50 rounded-tr-lg">
-        <img className="w-[52px] h-[56px] mt-[21px]" src={Logo} alt="LOGO" />
+        <div className="cursor-pointer" onClick={() => navigate('/')}>
+          <img
+              className="w-[52px] h-[56px] mt-[21px]"
+              src={Logo}
+              alt="LOGO"
+          />
+        </div>
         <ul className="w-full flex flex-col items-center cursor-pointer">
           <li
               onClick={() => setVisible(isVisible => !isVisible)}

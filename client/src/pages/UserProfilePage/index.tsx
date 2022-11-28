@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Navbar } from "../../components";
-import UserProfile from "../../components/UserProfile";
+import { UserProfile } from "../../components";
 
 const UserProfilePage = () => {
   return (
