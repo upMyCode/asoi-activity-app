@@ -2,19 +2,14 @@ import React from 'react';
 import {useFormik } from 'formik';
 import {RegistrationSchema} from "./validation";
 import {ExclamationCircle} from "heroicons-react";
-
-type TInitialStateValues = {
-  userFIO: string;
-  userEmail: string;
-  userMobilePhone: string;
-  userFaculty: string;
-  userGroup: string;
-  userPassword: string;
-  userRepeatPassword: string;
-}
-
+import {useAppDispatch} from "../../app/hooks";
+import {fetchUserDate} from "./registrationSlice";
+import {useNavigate} from 'react-router-dom';
 
 const UserRegistrationForm = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues:  {
       userFIO: '',
@@ -27,7 +22,8 @@ const UserRegistrationForm = () => {
     },
     validationSchema: RegistrationSchema,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+     dispatch(fetchUserDate(values));
+     navigate('/login');
     },
   });
 

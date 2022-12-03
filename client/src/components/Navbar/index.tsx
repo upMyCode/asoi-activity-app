@@ -33,7 +33,7 @@ const Navbar = () => {
           >
             <PersonIcon fontSize="large"/>
           </li>
-          <li className="border-transparent border-l-[6px] pr-2 pl-2 mt-[254px] mb-25px hover:border-indigo-600 border-l-[6px] mr-[6px] cursor-pointer">
+          <li onClick={() => navigate('/calendarevents')} className="border-transparent border-l-[6px] pr-2 pl-2 mt-[254px] mb-25px hover:border-indigo-600 border-l-[6px] mr-[6px] cursor-pointer">
             <CalendarMonthIcon fontSize="large"/>
           </li>
           <li className="border-transparent border-l-[6px] pr-2 pl-2 mt-[25px] hover:border-indigo-600 border-l-[6px] mr-[6px] cursor-pointer">

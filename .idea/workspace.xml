@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94498daf-a361-42cc-8365-ae4edcdac087" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/dbConnections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/USER.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +25,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -86,7 +95,11 @@
       <workItem from="1669275946182" duration="2848000" />
       <workItem from="1669356111299" duration="8364000" />
       <workItem from="1669623014461" duration="6979000" />
-      <workItem from="1669632894407" duration="6883000" />
+      <workItem from="1669632894407" duration="8084000" />
+      <workItem from="1669797775872" duration="185000" />
+      <workItem from="1669961021633" duration="4392000" />
+      <workItem from="1669968021029" duration="5840000" />
+      <workItem from="1670081202241" duration="10656000" />
     </task>
     <servers />
   </component>
@@ -114,5 +127,17 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/asoi-activity-client" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/node_modules/@reduxjs/toolkit/src/createAsyncThunk.ts</url>
+          <line>468</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
