@@ -5,6 +5,10 @@ export const store = configureStore({
   reducer: {
     registration: registrationReducer,
   },
+  middleware: getDefaultMiddleware =>
+      getDefaultMiddleware({
+        serializableCheck: false,
+      })
 });
 
 export type AppDispatch = typeof store.dispatch;

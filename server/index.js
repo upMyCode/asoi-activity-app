@@ -19,7 +19,8 @@ const checkDBConnection = async() => {
   }
 }
 
-checkDBConnection()
+checkDBConnection();
+
 const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
