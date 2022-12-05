@@ -4,6 +4,9 @@ import {
   ExclamationCircle,
 } from "heroicons-react";
 import {LogInSchema} from "./validation";
+import {fetchUserDate} from "./logInSlice";
+import {useAppDispatch} from "../../app/hooks";
+import {useNavigate} from "react-router-dom";
 
 type TInitialStateValues = {
   userFIO: string;
@@ -12,6 +15,9 @@ type TInitialStateValues = {
 }
 
 const UserLogInForm = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues:  {
       userFIO: '',
@@ -20,7 +26,8 @@ const UserLogInForm = () => {
     },
     validationSchema: LogInSchema,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      dispatch(fetchUserDate(values));
+      navigate('/');
     },
   });
 

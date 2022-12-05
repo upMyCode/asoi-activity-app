@@ -5,7 +5,7 @@ const register = async (userFIO, userEmail, userMobilePhone, userFaculty, userGr
 }
 
 const isUserExist = async (userEmail, userMobilePhone) => {
-    const currentUSER = await USER.findOne({where:{userEmail: userEmail, userMobilePhone: userMobilePhone}});
+    const currentUSER = await USER.findOne({where:{userEmail, userMobilePhone}});
 
     return {
         data: currentUSER,
@@ -13,4 +13,12 @@ const isUserExist = async (userEmail, userMobilePhone) => {
     };
 }
 
-module.exports = {register,isUserExist};
+const isUserExistWithLoginData = async (userMobilePhone, userFIO, userPassword) => {
+    const currentUSER = await USER.findOne({where:{userMobilePhone, userFIO, userPassword}});
+
+    return {
+        data: currentUSER,
+        statusExists: !!currentUSER
+    };
+}
+module.exports = {register,isUserExist, isUserExistWithLoginData};

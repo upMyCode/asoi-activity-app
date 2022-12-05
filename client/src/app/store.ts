@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import registrationReducer from '../components/UserRegistrationForm/registrationSlice';
+import loginReducer from '../components/UserLogInForm/logInSlice';
 
 export const store = configureStore({
   reducer: {
     registration: registrationReducer,
+    login: loginReducer
   },
   middleware: getDefaultMiddleware =>
       getDefaultMiddleware({

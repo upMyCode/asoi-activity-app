@@ -1,9 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import UserProfileImg from '../../assets/img/UserProfileImg.png';
 import {useNavigate} from "react-router-dom";
+import {useAppSelector} from "../../app/hooks";
+import Cookies from "js-cookie";
+
+type TUser = {
+  userFIO: string;
+  userMobilePhone: string;
+  userFaculty: string;
+  userGroup: string;
+}
 
 const UserProfile = () => {
   const navigate = useNavigate();
+
+  const [userData, setUserData] = useState<TUser>({
+    userFIO: '',
+    userMobilePhone: '',
+    userFaculty: '',
+    userGroup: '',
+  })
+
+  const userState = useAppSelector(state => state.login.loadingData)
+
+  useEffect(() => {
+    const userDataCookies = Cookies.get('user') as string;
+
+    if (userDataCookies) {
+      const userDataCookiesJSON = JSON.parse(userDataCookies);
+
+      setUserData({
+        userFIO: userDataCookiesJSON.userFIO,
+        userMobilePhone: userDataCookiesJSON.userMobilePhone,
+        userFaculty: userDataCookiesJSON.userFaculty,
+        userGroup: userDataCookiesJSON.userGroup,
+      })
+      console.log(1)
+    }
+  }, [userState])
+
 
   return (
       <div className="flex items-center flex-col w-full">
@@ -14,16 +49,16 @@ const UserProfile = () => {
           </div>
           <div className="ml-[74px]">
             <p className="text-xl text-gray-500">
-              ФИО: <span className="text-black"> Иванов Владислав Дрозд</span>
+              ФИО: <span className="text-black"> {userData.userFIO}</span>
             </p>
             <p className="text-xl my-[50px] text-gray-500">
-              Мобильный телефон: <span className="text-black">+375(29)1275667</span>
+              Мобильный телефон: <span className="text-black">{userData.userMobilePhone}</span>
             </p>
             <p className="text-xl text-gray-500">
-              Факультет: <span className="text-black">Автоматизированные системы обработки информации</span>
+              Факультет: <span className="text-black">{userData.userFaculty}</span>
             </p>
             <p className="text-xl mt-[50px] text-gray-500">
-              Группа: <span className="text-black">АС-36</span>
+              Группа: <span className="text-black">{userData.userGroup}</span>
             </p>
           </div>
         </div>

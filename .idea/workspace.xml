@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94498daf-a361-42cc-8365-ae4edcdac087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/database/user/controller/registerUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/user/userService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/user/controller/userLogIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/database/models/USER.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/models/USER.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/database/user/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/user/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1669961021633" duration="4392000" />
       <workItem from="1669968021029" duration="5840000" />
       <workItem from="1670081202241" duration="11528000" />
-      <workItem from="1670142142244" duration="16761000" />
+      <workItem from="1670142142244" duration="38154000" />
     </task>
     <servers />
   </component>

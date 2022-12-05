@@ -10,10 +10,12 @@ import NotInterestedOutlinedIcon from '@mui/icons-material/NotInterestedOutlined
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
 import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
 
 const Navbar = () => {
+  const userDataCookies = Cookies.get('user') as string;
   const [isVisible, setVisible] = useState<boolean>(false);
-  const isAuth = false;
+  const isAuth = !!userDataCookies;
 
   const navigate = useNavigate();
 
@@ -76,11 +78,19 @@ const Navbar = () => {
               </div>
             : isVisible && isAuth
                 ?
-                  <div className="relative flex  justify-center flex-col w-[154px] bg-gray-50 rounded shadow-md bottom-[72.5%] left-[105%] rounded">
-                    <button className="w-full text-center py-[6px] text-xs hover:bg-gray-200">
-                      Выйти из аккаунта
-                    </button>
-                  </div>
+                <div className="absolute flex justify-center flex-col w-[154px] bg-gray-50 rounded-lg shadow-md bottom-[85%] left-[4%]">
+                  <button
+                      onClick={() => navigate("/userprofile")}
+                      className="border-solid w-full text-center py-[6px] text-xs border-b border-gray-200 hover:bg-gray-200 rounded-t-lg"
+                  >
+                    Личный кабинет
+                  </button>
+                  <button
+                      className="w-full text-center py-[6px] text-xs hover:bg-gray-200 rounded-b-lg"
+                  >
+                    Выйти из аккаунта
+                  </button>
+                </div>
                 : ''
         }
       </div>

@@ -1,8 +1,42 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import userProfile from '../../assets/img/USER_PROFILE.png';
 import { Navbar } from '../../components';
+import Cookies from 'js-cookie';
+import { useAppSelector } from '../../app/hooks';
 
+type TUser = {
+  userFIO: string;
+  userMobilePhone: string;
+  userFaculty: string;
+  userGroup: string;
+}
 const HomePage = () => {
+  const [userData, setUserData] = useState<TUser>({
+    userFIO: '',
+    userMobilePhone: '',
+    userFaculty: '',
+    userGroup: '',
+  })
+
+  const userState = useAppSelector(state => state.login.loadingData)
+
+  useEffect(() => {
+    const userDataCookies = Cookies.get('user') as string;
+
+    if (userDataCookies) {
+      const userDataCookiesJSON = JSON.parse(userDataCookies);
+
+      setUserData({
+        userFIO: userDataCookiesJSON.userFIO,
+        userMobilePhone: userDataCookiesJSON.userMobilePhone,
+        userFaculty: userDataCookiesJSON.userFaculty,
+        userGroup: userDataCookiesJSON.userGroup,
+      })
+      console.log(1)
+    }
+  }, [userState])
+
+
   return (
       <div className="w-full min-h-screen">
         <div className="flex w-full">
@@ -12,10 +46,18 @@ const HomePage = () => {
               <div className="flex items-center ml-[161px] w-[997px] h-[161px]">
                 <img className="w-[161px] h-[161px]" src={userProfile}  alt="USER_PROFILE"/>
                 <div className="ml-[26px]">
-                  <p className="text-xl text-gray-500">ФИО:</p>
-                  <p className="text-xl my-[14px] text-gray-500">Мобильный телефон:</p>
-                  <p className="text-xl text-gray-500">Факультет:</p>
-                  <p className="text-xl mt-[15px] text-gray-500">Группа:</p>
+                  <p className="text-xl text-gray-500"><span className="text-black">
+                    ФИО: {userData.userFIO}</span>
+                  </p>
+                  <p className="text-xl my-[14px] text-gray-500">
+                    Мобильный телефон: <span className="text-black">{userData.userMobilePhone}</span>
+                  </p>
+                  <p className="text-xl text-gray-500">
+                    Факультет: <span className="text-black">{userData.userFaculty}</span>
+                  </p>
+                  <p className="text-xl mt-[15px] text-gray-500">
+                    <span className="text-black">Группа: {userData.userGroup}</span>
+                  </p>
                 </div>
               </div>
             </div>
