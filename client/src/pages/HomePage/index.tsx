@@ -2,14 +2,9 @@ import React, {useEffect, useState} from 'react';
 import userProfile from '../../assets/img/USER_PROFILE.png';
 import { Navbar } from '../../components';
 import Cookies from 'js-cookie';
-import { useAppSelector } from '../../app/hooks';
+import {useAppSelector} from '../../app/hooks';
+import {TUser} from './TUser';
 
-type TUser = {
-  userFIO: string;
-  userMobilePhone: string;
-  userFaculty: string;
-  userGroup: string;
-}
 const HomePage = () => {
   const [userData, setUserData] = useState<TUser>({
     userFIO: '',
@@ -17,12 +12,11 @@ const HomePage = () => {
     userFaculty: '',
     userGroup: '',
   })
-
+  const userDataCookies = Cookies.get('user') as string;
   const userState = useAppSelector(state => state.login.loadingData)
+  const userLogout = useAppSelector(state => state.logout.loadingStatus)
 
   useEffect(() => {
-    const userDataCookies = Cookies.get('user') as string;
-
     if (userDataCookies) {
       const userDataCookiesJSON = JSON.parse(userDataCookies);
 
@@ -32,10 +26,18 @@ const HomePage = () => {
         userFaculty: userDataCookiesJSON.userFaculty,
         userGroup: userDataCookiesJSON.userGroup,
       })
-      console.log(1)
     }
+    console.log("Hello i'm here")
   }, [userState])
 
+  useEffect(() => {
+    setUserData({
+      userFIO: "",
+      userMobilePhone: "",
+      userFaculty: "",
+      userGroup: "",
+    })
+  }, [userLogout]);
 
   return (
       <div className="w-full min-h-screen">

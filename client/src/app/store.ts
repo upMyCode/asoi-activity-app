@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import registrationReducer from '../components/UserRegistrationForm/registrationSlice';
 import loginReducer from '../components/UserLogInForm/logInSlice';
+import logoutReducer from '../components/Navbar/logoutSlice';
 
 export const store = configureStore({
   reducer: {
     registration: registrationReducer,
-    login: loginReducer
+    login: loginReducer,
+    logout: logoutReducer
   },
   middleware: getDefaultMiddleware =>
       getDefaultMiddleware({

@@ -1,29 +1,33 @@
-import { createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
-import {TInitialState} from './TInitialState';
-import {TUser} from './TUser';
+import Cookies from "js-cookie";
+import {TInitialState} from './TInitialState'
 
 const initialState: TInitialState = {
   loading: 'idle',
-  loadingStatus: {},
+  loadingStatus: '',
   error: null
 };
 
 export const fetchUserDate = createAsyncThunk(
-    'registration/fetchUserDate',
-    async function(state:TUser,{ rejectWithValue}) {
-      try{
-        const response = await axios.post('http://localhost:8080/auth/registration', state);
+    'logout/fetchUserDate',
+    async function(id:string,{ rejectWithValue}) {
 
-        return response;
+      console.log(id)
+      try{
+        const response = await axios.post('http://localhost:8080/auth/logout', {id});
+
+        const responseData: string = response.data;
+
+        return responseData;
       } catch (e) {
         return rejectWithValue(e);
       }
     }
 )
 
-const registrationSlice = createSlice({
-  name: 'registration',
+const logoutSlice = createSlice({
+  name: 'logout',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -34,6 +38,8 @@ const registrationSlice = createSlice({
         .addCase(fetchUserDate.fulfilled, (state, action) => {
           state.loading = 'succeeded';
           state.loadingStatus = action.payload;
+          console.log(action.payload);
+          Cookies.remove('user');
         })
         .addCase(fetchUserDate.rejected, (state) => {
           state.loading = 'failed';
@@ -41,4 +47,4 @@ const registrationSlice = createSlice({
   }
 })
 
-export default registrationSlice.reducer;
+export default logoutSlice.reducer;

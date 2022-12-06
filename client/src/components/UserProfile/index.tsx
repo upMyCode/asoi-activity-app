@@ -22,6 +22,7 @@ const UserProfile = () => {
   })
 
   const userState = useAppSelector(state => state.login.loadingData)
+  const userLogout = useAppSelector(state => state.logout.loadingStatus)
 
   useEffect(() => {
     const userDataCookies = Cookies.get('user') as string;
@@ -37,7 +38,7 @@ const UserProfile = () => {
       })
       console.log(1)
     }
-  }, [userState])
+  }, [userState, userLogout])
 
 
   return (

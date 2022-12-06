@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94498daf-a361-42cc-8365-ae4edcdac087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/database/user/controller/userLogIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/user/controller/userLogOut.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/database/user/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/user/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -96,7 +96,7 @@
       <workItem from="1669961021633" duration="4392000" />
       <workItem from="1669968021029" duration="5840000" />
       <workItem from="1670081202241" duration="11528000" />
-      <workItem from="1670142142244" duration="38154000" />
+      <workItem from="1670142142244" duration="49978000" />
     </task>
     <servers />
   </component>

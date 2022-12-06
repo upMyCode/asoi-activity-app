@@ -21,4 +21,21 @@ const isUserExistWithLoginData = async (userMobilePhone, userFIO, userPassword) 
         statusExists: !!currentUSER
     };
 }
-module.exports = {register,isUserExist, isUserExistWithLoginData};
+
+const isUserExistById = async (id) => {
+    const currentUser = await USER.findOne({where:{id}});
+
+    return !!currentUser;
+}
+
+const deleteUserById = async (id) => {
+    return await USER.destroy({where:{id}})
+}
+
+module.exports = {
+    register,
+    isUserExist,
+    isUserExistWithLoginData,
+    isUserExistById,
+    deleteUserById
+};

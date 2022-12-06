@@ -1,29 +1,9 @@
 import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit';
 import axios from "axios";
 import Cookies from 'js-cookie'
-
-type TUser = {
-     userFIO: string;
-     userMobilePhone: string;
-     userPassword: string;
-};
-
-type TUserReturnStatement = {
-  id: string;
-  userFIO: string;
-  userEmail: string;
-  userMobilePhone: string;
-  userFaculty: string;
-  userGroup: string;
-  userPassword: string;
-  userRepeatPassword: string;
-};
-
-type TInitialState = {
-     loading: 'idle' | 'pending' | 'succeeded' | 'failed';
-     loadingData: TUserReturnStatement;
-     error: string | null;
-}
+import {TUser} from './TUser'
+import {TUserReturnStatement} from './TUserReturnStatement';
+import {TInitialState} from './TInitialState'
 
 const userReturnStatement = {
       id: '',
