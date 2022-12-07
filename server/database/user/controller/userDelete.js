@@ -1,6 +1,6 @@
 const {isUserExistById, deleteUserById} = require('../userService');
 
-const userLogout = async (req, res, next) => {
+const userDelete = async (req, res, next) => {
   try {
     const data = req.body;
     const { id } = req.body;
@@ -19,4 +19,4 @@ const userLogout = async (req, res, next) => {
   }
 }
 
-module.exports = userLogout;
+module.exports = userDelete;

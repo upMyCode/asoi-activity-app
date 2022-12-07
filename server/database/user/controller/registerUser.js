@@ -7,17 +7,12 @@ const userRegistration = async(req, res, next) => {
     const searchUser = await isUserExist(userEmail, userMobilePhone);
 
     if (searchUser.statusExists) {
-      return res.status(400).send({message: 'User already exists'});
+      res.status(400).send({message: 'User already exists with email or/and password'});
+    } else {
+      console.log('error')
+      const newUser = await register(userFIO, userEmail, userMobilePhone, userFaculty, userGroup, userPassword);
+      res.status(201).send({body: {id: newUser.id}});
     }
-
-    const newUser = await register(userFIO, userEmail, userMobilePhone, userFaculty, userGroup, userPassword);
-    const searchUserAfterRegistration = await isUserExist(userEmail, userMobilePhone);
-
-    res.status(201).send({body: {id: searchUserAfterRegistration?.data.id}});
-
-    const allUSERS = await USER.findAll();
-    console.log(allUSERS);
-
     next();
   } catch (e) {
     next(e);

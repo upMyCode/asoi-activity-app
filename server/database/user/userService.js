@@ -1,11 +1,16 @@
 const USER = require('../models/USER');
+const {Op} = require("sequelize");
 
 const register = async (userFIO, userEmail, userMobilePhone, userFaculty, userGroup, userPassword) => {
     return USER.create({userFIO, userEmail, userMobilePhone, userFaculty, userGroup, userPassword});
 }
 
 const isUserExist = async (userEmail, userMobilePhone) => {
-    const currentUSER = await USER.findOne({where:{userEmail, userMobilePhone}});
+    const currentUSER = await USER.findOne({
+        where:{
+            [Op.or]: [{userEmail: userEmail}, {userMobilePhone: userMobilePhone}],
+        }
+    });
 
     return {
         data: currentUSER,

@@ -9,26 +9,15 @@ import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
 import NotInterestedOutlinedIcon from '@mui/icons-material/NotInterestedOutlined';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Cookies from "js-cookie";
-import {useAppDispatch, useAppSelector} from '../../app/hooks'
-import {fetchUserDate} from "./logoutSlice";
 
 const Navbar = () => {
   const userDataCookies = Cookies.get('user') as string;
-  const [userDataId, setUserDataId] = useState<string>('')
   const [isVisible, setVisible] = useState<boolean>(false);
   const isAuth = !!userDataCookies;
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (userDataCookies) {
-      const data = JSON.parse(userDataCookies)
-      setUserDataId(data.id);
-    }
-    console.log(userDataId)
-  }, [userDataCookies])
+  const locationName = useLocation().pathname
 
   return (
       <div className="flex flex-col items-center w-[100px] min-h-screen bg-gray-50 rounded-tr-lg">
@@ -98,9 +87,9 @@ const Navbar = () => {
                   </button>
                   <button
                       onClick={() => {
-                        dispatch(fetchUserDate(userDataId))
                         setVisible(isVisible => !isVisible)
-                        navigate("/")
+                        Cookies.remove('user');
+                        locationName === '/' ? navigate(0) : navigate('/')
                       }}
                       className="w-full text-center py-[6px] text-xs hover:bg-gray-200 rounded-b-lg"
                   >

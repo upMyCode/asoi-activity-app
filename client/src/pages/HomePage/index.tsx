@@ -12,9 +12,10 @@ const HomePage = () => {
     userFaculty: '',
     userGroup: '',
   })
+  const [isLogout, setLogout] = useState(false);
   const userDataCookies = Cookies.get('user') as string;
+
   const userState = useAppSelector(state => state.login.loadingData)
-  const userLogout = useAppSelector(state => state.logout.loadingStatus)
 
   useEffect(() => {
     if (userDataCookies) {
@@ -26,18 +27,27 @@ const HomePage = () => {
         userFaculty: userDataCookiesJSON.userFaculty,
         userGroup: userDataCookiesJSON.userGroup,
       })
+    } else {
+      console.log('delete')
+      setUserData({
+        userFIO: "",
+        userMobilePhone: "",
+        userFaculty: "",
+        userGroup: "",
+      })
     }
     console.log("Hello i'm here")
   }, [userState])
 
-  useEffect(() => {
-    setUserData({
-      userFIO: "",
-      userMobilePhone: "",
-      userFaculty: "",
-      userGroup: "",
-    })
-  }, [userLogout]);
+  // useEffect(() => {
+  //   setUserData({
+  //     userFIO: "",
+  //     userMobilePhone: "",
+  //     userFaculty: "",
+  //     userGroup: "",
+  //   })
+  // }, [logoutStatus == true]);
+
 
   return (
       <div className="w-full min-h-screen">
