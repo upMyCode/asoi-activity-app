@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import IContainerProps from "./IContainer";
+import IContainerProps from './IContainer';
 
 const Container = ({children}: PropsWithChildren<IContainerProps>) => {
   return (

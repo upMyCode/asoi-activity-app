@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import UserProfileImg from '../../assets/img/UserProfileImg.png';
-import {useNavigate} from "react-router-dom";
-import {useAppSelector} from "../../app/hooks";
-import Cookies from "js-cookie";
+import {useNavigate} from 'react-router-dom';
+import {useAppSelector} from '../../app/hooks';
+import Cookies from 'js-cookie';
 
 type TUser = {
   userFIO: string;

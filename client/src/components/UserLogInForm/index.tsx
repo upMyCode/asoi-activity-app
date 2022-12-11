@@ -2,17 +2,11 @@ import React from 'react';
 import {useFormik } from 'formik';
 import {
   ExclamationCircle,
-} from "heroicons-react";
-import {LogInSchema} from "./validation";
-import {fetchUserDate} from "./logInSlice";
-import {useAppDispatch} from "../../app/hooks";
-import {useNavigate} from "react-router-dom";
-
-type TInitialStateValues = {
-  userFIO: string;
-  userMobilePhone: string;
-  userPassword: string;
-}
+} from 'heroicons-react';
+import {LogInSchema} from './validation';
+import {fetchUserDate} from './logInSlice';
+import {useAppDispatch} from '../../app/hooks';
+import {useNavigate} from 'react-router-dom';
 
 const UserLogInForm = () => {
   const dispatch = useAppDispatch();

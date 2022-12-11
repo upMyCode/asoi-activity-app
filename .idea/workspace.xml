@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="94498daf-a361-42cc-8365-ae4edcdac087" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/database/models/USER.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/models/USER.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/database/user/controller/registerUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/user/controller/registerUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/database/user/controller/userLogOut.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/user/controller/userDelete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/database/user/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/user/userService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -98,7 +96,11 @@
       <workItem from="1669968021029" duration="5840000" />
       <workItem from="1670081202241" duration="11528000" />
       <workItem from="1670142142244" duration="50702000" />
-      <workItem from="1670425744456" duration="9360000" />
+      <workItem from="1670425744456" duration="11938000" />
+      <workItem from="1670489660247" duration="4423000" />
+      <workItem from="1670565824460" duration="1382000" />
+      <workItem from="1670570679860" duration="60000" />
+      <workItem from="1670777839325" duration="7510000" />
     </task>
     <servers />
   </component>

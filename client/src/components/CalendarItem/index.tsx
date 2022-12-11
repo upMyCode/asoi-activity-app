@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import {ICalendarItemProps} from "./ICalendarItemProps";
+import {ICalendarItemProps} from './ICalendarItemProps';
+import {useNavigate} from 'react-router-dom';
 
 const CalendarItem: FC<ICalendarItemProps> = ({
        title,
@@ -9,8 +10,10 @@ const CalendarItem: FC<ICalendarItemProps> = ({
        eventDate,
        img
     }) => {
+  const navigate = useNavigate();
+
   return (
-      <div className="w-[371px] h-[176px] my-[28px] mx-[13px] rounded-lg shadow-md">
+      <div className="w-[371px] h-[176px] my-[28px] mx-[13px] rounded-lg shadow-md hover:bg-gray-100 cursor-pointer" onClick={() => navigate('/event')}>
         <div className="ml-[19px] mt-[23px] flex">
           <div className="w-[167px] h-[114px] mr-[10px] rounded-lg">
             <img src={img} className="object-contain" alt="eventImg"/>

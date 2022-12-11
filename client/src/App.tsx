@@ -6,6 +6,7 @@ import RegistrationPage from "./pages/RegistrationPage";
 import LogInPage from './pages/LogInPage';
 import UserProfilePage from "./pages/UserProfilePage";
 import CalendarOfEventsPage from "./pages/CalendarOfEventsPage";
+import EventPage from "./pages/EventPage";
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
           <Route
               path={PATHS.CALENDAREVENTS}
               element={<CalendarOfEventsPage />}
+          />
+          <Route
+              path={PATHS.EVENTPAGE}
+              element={<EventPage />}
           />
         </Routes>
       </Router>

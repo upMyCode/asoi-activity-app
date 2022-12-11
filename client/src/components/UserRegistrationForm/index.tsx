@@ -1,9 +1,9 @@
 import React from 'react';
 import {useFormik } from 'formik';
-import {RegistrationSchema} from "./validation";
-import {ExclamationCircle} from "heroicons-react";
-import {useAppDispatch} from "../../app/hooks";
-import {fetchUserDate} from "./registrationSlice";
+import {RegistrationSchema} from './validation';
+import {ExclamationCircle} from 'heroicons-react';
+import {useAppDispatch} from '../../app/hooks';
+import {fetchUserDate} from './registrationSlice';
 import {useNavigate} from 'react-router-dom';
 
 const UserRegistrationForm = () => {

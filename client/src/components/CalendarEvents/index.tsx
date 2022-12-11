@@ -1,5 +1,5 @@
 import React from 'react';
-import CalendarItem from "../CalendarItem";
+import CalendarItem from '../CalendarItem';
 import IMG from '../../assets/img/PinPong.jpeg'
 
 const testArr = [
@@ -10,7 +10,7 @@ const testArr = [
       freeSeats: 4,
       img: IMG ,
       registrationStatus: true,
-      id: 3,
+      id: 12,
     },
   {
     title: 'Чемпионат по теннису',
@@ -19,7 +19,34 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 13,
+  },
+  {
+    title: 'Чемпионат по теннису',
+    eventType: 'Спортивное',
+    eventDate: '12.10.2022',
+    freeSeats: 4,
+    img: IMG ,
+    registrationStatus: true,
+    id: 11,
+  },
+  {
+    title: 'Чемпионат по теннису',
+    eventType: 'Спортивное',
+    eventDate: '12.10.2022',
+    freeSeats: 4,
+    img: IMG ,
+    registrationStatus: true,
+    id: 1,
+  },
+  {
+    title: 'Чемпионат по теннису',
+    eventType: 'Спортивное',
+    eventDate: '12.10.2022',
+    freeSeats: 4,
+    img: IMG ,
+    registrationStatus: true,
+    id: 2,
   },
   {
     title: 'Чемпионат по теннису',
@@ -37,7 +64,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 4,
   },
   {
     title: 'Чемпионат по теннису',
@@ -46,7 +73,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 5,
   },
   {
     title: 'Чемпионат по теннису',
@@ -55,34 +82,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
-  },
-  {
-    title: 'Чемпионат по теннису',
-    eventType: 'Спортивное',
-    eventDate: '12.10.2022',
-    freeSeats: 4,
-    img: IMG ,
-    registrationStatus: true,
-    id: 3,
-  },
-  {
-    title: 'Чемпионат по теннису',
-    eventType: 'Спортивное',
-    eventDate: '12.10.2022',
-    freeSeats: 4,
-    img: IMG ,
-    registrationStatus: true,
-    id: 3,
-  },
-  {
-    title: 'Чемпионат по теннису',
-    eventType: 'Спортивное',
-    eventDate: '12.10.2022',
-    freeSeats: 4,
-    img: IMG ,
-    registrationStatus: true,
-    id: 3,
+    id: 6,
   },
 
   {
@@ -92,7 +92,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 7,
   },
   {
     title: 'Чемпионат по теннису',
@@ -101,7 +101,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 8,
   },
   {
     title: 'Чемпионат по теннису',
@@ -110,7 +110,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: false,
-    id: 3,
+    id: 9,
   },
   {
     title: 'Чемпионат по теннису',
@@ -119,7 +119,7 @@ const testArr = [
     freeSeats: 4,
     img: IMG ,
     registrationStatus: true,
-    id: 3,
+    id: 10,
   },
 ]
 

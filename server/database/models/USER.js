@@ -10,14 +10,17 @@ const USER = db.define('USER',{
   },
   userFIO: {
     type: DataTypes.STRING,
+    allowNull: false,
   },
   userEmail: {
     type: DataTypes.STRING,
-    unique: true
+    unique: true,
+    allowNull: false,
   },
   userMobilePhone: {
     type: DataTypes.STRING,
-    unique: true
+    unique: true,
+    allowNull: false,
   },
   userFaculty: {
     type: DataTypes.STRING
@@ -26,7 +29,8 @@ const USER = db.define('USER',{
     type: DataTypes.STRING
   },
   userPassword: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    allowNull: false,
   }
 },{timestamps: false});
 

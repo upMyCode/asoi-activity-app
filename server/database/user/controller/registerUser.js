@@ -1,5 +1,6 @@
 const {register, isUserExist} = require('../userService');
 const USER = require('../../models/USER');
+
 const userRegistration = async(req, res, next) => {
   try {
     const {userFIO, userEmail, userMobilePhone, userFaculty, userGroup, userPassword} = req.body;

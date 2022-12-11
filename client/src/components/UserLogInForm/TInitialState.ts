@@ -1,4 +1,4 @@
-import {TUserReturnStatement} from "./TUserReturnStatement";
+import {TUserReturnStatement} from './TUserReturnStatement';
 
 export type TInitialState = {
   loading: 'idle' | 'pending' | 'succeeded' | 'failed';

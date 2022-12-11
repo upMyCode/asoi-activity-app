@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, Container, AuthContainer, UserLogInForm} from '../../components';
-import {useNavigate} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
 const LogInPage = () => {
   const navigate = useNavigate();

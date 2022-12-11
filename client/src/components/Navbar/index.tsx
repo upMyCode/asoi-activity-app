@@ -10,7 +10,7 @@ import NotInterestedOutlinedIcon from '@mui/icons-material/NotInterestedOutlined
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 
 const Navbar = () => {
   const userDataCookies = Cookies.get('user') as string;

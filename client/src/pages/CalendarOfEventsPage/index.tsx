@@ -1,6 +1,6 @@
 import React from 'react';
-import {AuthContainer, CalendarEvents, Container, Navbar, UserRegistrationForm} from "../../components";
-import {useNavigate} from "react-router-dom";
+import {CalendarEvents, Container, Navbar} from '../../components';
+import {useNavigate} from 'react-router-dom';
 
 const CalendarOfEventsPage = () => {
   const navigate = useNavigate();
@@ -26,14 +26,12 @@ const CalendarOfEventsPage = () => {
               <div className="w-full flex mt-[46px] mb-[29px] justify-center">
                 <div className="w-[424px] flex justify-between">
                   <button
-                      onClick={() => navigate("/")}
                       className="inline-block rounded-lg bg-white px-4 py-2 text-sm leading-5  font-medium text-indigo-600 shadow-sm hover:bg-gray-100"
                   >
                     <span className="text-indigo-600" aria-hidden="true">&larr; </span>
                     Ранее
                   </button>
                   <button
-                      onClick={() => navigate("/")}
                       className="inline-block rounded-lg bg-white px-4 py-2 text-sm leading-5  font-medium text-indigo-600 shadow-sm hover:bg-gray-100"
                   >
                     Далее
